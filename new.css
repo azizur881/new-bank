@@ -1,0 +1,18 @@
+body{
+    padding:200px;
+}
+.login-area{
+
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 7px 7px 10px rgb(149, 156, 141)
+}
+.col-md-3{
+    border-radius: 6px;
+}
+.deposit{
+    box-shadow: 8px 8px 10px grey;
+}
+.withdraw{
+    box-shadow: 8px 8px 10px grey;
+}
