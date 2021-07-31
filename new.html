@@ -68,6 +68,8 @@
             main.style.display="block"
             ;
         })
+        //deposit area
+
         const depositBtn=document.getElementById("depositbtn");
         depositBtn.addEventListener("click",function(){
             const depositAmount=document.getElementById('deposit').value
@@ -78,15 +80,18 @@
            const totalDeposit= depositNumber + newDeposit;
 
            document.getElementById("depositAmount").innerText =  totalDeposit
-           
+           //balance area
+
            const balance = document.getElementById('balance').innerText
            const balanceNumber = parseFloat(balance)
-           const totalBalance = totalDeposit + balanceNumber
+           let totalBalance = depositNumber + balanceNumber
            
            document.getElementById('balance').innerText = totalBalance
+           document.getElementById('deposit').value = ("")
 
 
         })
+        //withdraw area
         const withdrawBtn =document.getElementById('withdrawBtn')
         withdrawBtn.addEventListener('click',function(){
             const withdraw = document.getElementById('withdraw').value
@@ -98,9 +103,11 @@
 
         const balance = document.getElementById('balance').innerText
            const balanceNumber = parseFloat(balance)
-           const totalBalance = totalWithdraw - balanceNumber
+           let totalBalance = withdrawNumber-balanceNumber 
            
-           document.getElementById('balance').innerText = totalBalance 
+           document.getElementById('balance').innerText = (totalBalance*-1)
+           document.getElementById("withdraw").value = ('')
+      
         })
        
     </script>
